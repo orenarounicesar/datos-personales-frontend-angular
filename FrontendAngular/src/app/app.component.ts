@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 import { ActualizarDocumentoComponent } from './actualizar-documento/actualizar-documento.component';
-import { HttpClientModule } from '@angular/common/http';
+
+import { AddDatosPersonalesComponent } from './add-datos-personales/add-datos-personales.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, ActualizarDocumentoComponent, HttpClientModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, AddDatosPersonalesComponent, ActualizarDocumentoComponent]
 })
 export class AppComponent {
   title = 'FrontendAngular';
