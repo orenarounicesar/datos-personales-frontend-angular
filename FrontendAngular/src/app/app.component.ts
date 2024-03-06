@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
+import { ActualizarDocumentoComponent } from './actualizar-documento/actualizar-documento.component';
+
 import { AddDatosPersonalesComponent } from './add-datos-personales/add-datos-personales.component';
 
 @Component({
@@ -7,7 +10,7 @@ import { AddDatosPersonalesComponent } from './add-datos-personales/add-datos-pe
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, AddDatosPersonalesComponent]
+    imports: [RouterOutlet, AddDatosPersonalesComponent, ActualizarDocumentoComponent]
 })
 export class AppComponent {
   title = 'FrontendAngular';
