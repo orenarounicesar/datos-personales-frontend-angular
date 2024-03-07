@@ -20,7 +20,7 @@ export class ActualizarDocumentoComponent {
 
   
 
-  onUpdatePersona(persona:Persona):void{
+  onActualizarPersona(persona:Persona):void{
     this.personaService.updatePersona(persona.id, persona).subscribe(res => {
       if(res){
         alert(`La persona número ${persona.id} se ha modificado con exito!`);
