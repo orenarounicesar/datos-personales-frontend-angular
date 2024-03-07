@@ -8,10 +8,10 @@ export const routes: Routes = [
         component: ActualizarDocumentoComponent,
     },
     { 
-        path: 'add', 
+        path: 'add_page', 
         component: AddDatosPersonalesComponent },
     { 
         path: '', 
-        redirectTo: 'add', 
+        redirectTo: 'add_page', 
         pathMatch: 'full' },
 ];
