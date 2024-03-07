@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PersonaService } from '../service/persona.service';
 import { Persona } from '../models/persona';
@@ -17,8 +17,7 @@ import { CommonModule } from '@angular/common';
 
 export class AddDatosPersonalesComponent {
 
-  constructor(private personaService: PersonaService) {
-  }
+  private personaService=inject(PersonaService)
 
   onAddPersona(persona: Persona): void {
     this.personaService.addPersona(persona).subscribe(res => {

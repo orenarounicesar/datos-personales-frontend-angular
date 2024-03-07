@@ -1,13 +1,12 @@
 .container1{
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   background-size: cover;
+  background-image: url(../../assets/5459.jpg);
   background-repeat: no-repeat;
   background-position: center;
   padding: 0.01%;
   padding: 50px;
-  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
 
 

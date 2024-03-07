@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 //import { DocumentoService } from '../documento.service';
 import { Observable } from 'rxjs';
 import { FormsModule } from '@angular/forms';
@@ -14,8 +14,7 @@ import { Persona } from '../models/persona';
 export class ActualizarDocumentoComponent {
   persona:Persona=new Persona();
   
-
-  constructor(private personaService:PersonaService) { }
+   private personaService=inject(PersonaService)
 
 
   
