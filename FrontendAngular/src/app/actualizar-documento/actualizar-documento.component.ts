@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 //import { DocumentoService } from '../documento.service';
 import { Observable } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { PersonaService } from '../service/persona.service';
+import { Persona } from '../models/persona';
 @Component({
   selector: 'app-actualizar-documento',
   standalone: true,
@@ -10,36 +12,22 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./actualizar-documento.component.css']
 })
 export class ActualizarDocumentoComponent {
-  id: string = '';
-  tipoDocumento: string = '';
-  documento: string = '';
-  nombre1 : string='';
-  nombre2 : string='';
-  apellido1 : string='';
-  apellido2 : string='';
-  fechaNacimiento: Date | undefined;
-  sexo: string='';
+  persona:Persona=new Persona();
+  
+   private personaService=inject(PersonaService)
 
-  constructor() { }
 
-  actualizarDocumento() {
-    const data = {
-      tipoDocumento: this.tipoDocumento,
-      documento: this.documento,
-      nombre1: this.nombre1,
-      nombre2: this.nombre2,
-      apellido1: this.apellido1,
-      apellido2: this.apellido2,
-      fechaNacimiento: this.fechaNacimiento,
-      sexo: this.sexo
-    };
+  
 
-    //this.documentoService.updateDocumento(this.id, data)
-     // .subscribe(response => {
-      //  console.log('Documento actualizado:', response);
-      //}, error => {
-        //console.error('Error al actualizar el documento:', error);
-      //});
+  onActualizarPersona(persona:Persona):void{
+    this.personaService.updatePersona(persona.id, persona).subscribe(res => {
+      if(res){
+        alert(`La persona número ${persona.id} se ha modificado con exito!`);
+        
+      } else {
+        alert('Error! :(')
+      }
+    });
   }
 }
 

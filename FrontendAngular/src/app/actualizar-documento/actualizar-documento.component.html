@@ -14,64 +14,52 @@
   </div>
    -->
 
-  <div class="container1">
+<div class="container1">
 
-    <div class="container_form">
-  
-      <div class="contenedor_text">
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Id</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Tipo de Documento</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Documento</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
+  <div class="container_form">
+
+    <div class="contenedor_text">
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Id</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0001" disabled="true">
       </div>
-  
-      <div class="contenedor_text">
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Nombre1</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Nombre2</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Apellido1</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Tipo de Documento</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="C.C | T.I | Pasaporte | P.P">
       </div>
-  
-  
-      <div class="contenedor_text">
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Apellido2</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
-          <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-        <div class="mb-2">
-          <label for="exampleFormControlInput1" class="form-label">Sexo</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-        </div>
-      </div>
-  
-      <button (click)="actualizarDocumento()" class="btn">Actualizar</button>
     </div>
-  
-  
-  
-  
-  
-  
-    
-  
+
+    <div class="contenedor_text">
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Nombre1</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pepito">
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Nombre2</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Segundo">
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Apellido1</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Perez">
+      </div>
+    </div>
+
+
+    <div class="contenedor_text">
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Apellido2</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alvarez">
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Fecha de ncimiento</label>
+        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="31/12/2999">
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Sexo</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="M">
+      </div>
+    </div>
+
+    <button (click)="onActualizarPersona(persona)" class="btn">Actualizar</button>
   </div>
+</div>

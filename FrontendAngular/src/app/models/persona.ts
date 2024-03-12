@@ -1,12 +1,11 @@
 export class Persona {
-    identificacion: string;
-    nombre: string;
-    apellido:string;
-    sexo: string;
-    edad: number;
-    departamento:string;
-    ciudad:string;
-    valorDeApoyo:number;
-    modalidad:string;
-    fecha:string;
+    id!: number;
+    tipoDocumento!: string;
+    documento!: string;
+    nombre1!: string;
+    nombre2!: string;
+    apellido1!: string;
+    apellido2!: string;
+    fechaNacimiento!: string;
+    sexo!:string;
 }
