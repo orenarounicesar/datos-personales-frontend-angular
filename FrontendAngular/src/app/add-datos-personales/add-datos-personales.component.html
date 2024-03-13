@@ -8,22 +8,22 @@
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="form-label">Tipo de Documento</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" id="texttipoDocumento" [(ngModel)]="persona.tipoDocumento" placeholder="">
                 </div>
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="form-label">Primer Nombre</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" id="exampleFormControlInput2" [(ngModel)]="persona.nombre1" placeholder="">
                 </div>
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="form-label">Primer Apellido</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" id="exampleFormControlInput3" [(ngModel)]="persona.apellido1"  placeholder="">
                 </div>
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="form-label">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="date" class="form-control" id="exampleFormControlInput4" [(ngModel)]="persona.fechaNacimiento" placeholder="">
                 </div>
 
 
@@ -33,28 +33,28 @@
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="form-label">Documento</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" id="exampleFormControlInput5" [(ngModel)]="persona.documento" placeholder="">
                 </div>
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="form-label">Segundo Nombre</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" id="exampleFormControlInput6" [(ngModel)]="persona.nombre2" placeholder="">
                 </div>
 
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="form-label">Segundo Apellido</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" id="exampleFormControlInput7" [(ngModel)]="persona.apellido2" placeholder="">
                 </div>
 
                 <div class="mb-2">
                     <label for="exampleFormControlInput1" class="form-label">Sexo</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" id="exampleFormControlInput8" [(ngModel)]="persona.sexo" placeholder="">
                 </div>
             </div>
         </div>
 
-        <button type="button" class="btn btn-dark" style="width: 100%;">Guardar</button>
+        <button type="button" class="btn btn-dark" style="width: 100%;" (click)="onAddPersona(persona)">Guardar</button>
     </div>
 
    
