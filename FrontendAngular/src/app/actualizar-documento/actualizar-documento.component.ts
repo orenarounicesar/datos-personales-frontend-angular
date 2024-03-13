@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { PersonaService } from '../service/persona.service';
 import { Persona } from '../models/persona';
+
 @Component({
   selector: 'app-actualizar-documento',
   standalone: true,
@@ -12,12 +13,12 @@ import { Persona } from '../models/persona';
   styleUrls: ['./actualizar-documento.component.css']
 })
 export class ActualizarDocumentoComponent {
-  persona:Persona=new Persona();
+   persona:Persona=new Persona();
   
    private personaService=inject(PersonaService)
-
-
   
+  
+     
 
   onActualizarPersona(persona:Persona):void{
     this.personaService.updatePersona(persona.id, persona).subscribe(res => {

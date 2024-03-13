@@ -11,11 +11,10 @@ export class PersonaService {
 
   constructor(private http:HttpClient) { }
 
-  url:string = "https://192.168.7.1/api/Persona";
+  url:string = "https://";
 
   getPersona(){
     return this.http.get(this.url)
-    
   }
 
   public addPersona(persona:Persona):Observable<Persona>{
