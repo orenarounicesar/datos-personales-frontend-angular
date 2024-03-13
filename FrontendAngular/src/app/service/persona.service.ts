@@ -11,7 +11,7 @@ export class PersonaService {
 
   constructor(private http:HttpClient) { }
 
-  url = `${environment.apiUrl}/datos`;
+  url = `${environment.apiUrl}/api/personalinformation`;
 
   getPersona(){
     return this.http.get(this.url)
