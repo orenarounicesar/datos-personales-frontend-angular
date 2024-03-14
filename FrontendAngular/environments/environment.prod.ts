@@ -1,3 +1,5 @@
 export const environment = {
-    apiUrl: 'https://api.su-dominio.com/api/',
+    apiUrlpython: 'htttp://localhost:8000',
+
+    apiUrlnet: 'http://localhost:3000'
 };
