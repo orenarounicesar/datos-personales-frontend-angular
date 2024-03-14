@@ -1,6 +1,6 @@
 export const environment = {
 
-    apipython: '',
+    apipython: 'htttp://localhost:8000',
 
     apiUrl: 'http://localhost:3000'
 
