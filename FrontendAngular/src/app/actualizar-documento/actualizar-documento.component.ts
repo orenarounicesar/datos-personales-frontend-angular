@@ -18,7 +18,6 @@ export class ActualizarDocumentoComponent {
    private personaService=inject(PersonaService)
    private formb = inject(FormBuilder)
   
-   form?:FormGroup; 
 
   onBuscarPersona_Id(persona:Persona):void{
     this.personaService.getPersona_Id(persona.id).subscribe(res => {
