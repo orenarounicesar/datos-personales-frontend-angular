@@ -11,7 +11,7 @@ export class PersonaService {
 
   constructor(private http:HttpClient) { }
 
-  url:string = "https://192.168.7.1/api/Persona";
+  url:string = "https:localhost:3000/api/personalinformation";
 
   getPersona(){
     return this.http.get(this.url)

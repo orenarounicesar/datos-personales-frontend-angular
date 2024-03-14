@@ -19,15 +19,15 @@ export class ActualizarDocumentoComponent {
 
   
 
-  onActualizarPersona(persona:Persona):void{
-    this.personaService.updatePersona(persona.id, persona).subscribe(res => {
-      if(res){
-        alert(`La persona número ${persona.id} se ha modificado con exito!`);
-        
-      } else {
-        alert('Error! :(')
-      }
-    });
-  }
+    // onActualizarPersona(persona:Persona):void{
+    //   this.personaService.updatePersona(persona.id, persona).subscribe(res => {
+    //     if(res){
+    //       alert(`La persona número ${persona.id} se ha modificado con exito!`);
+          
+    //     } else {
+    //       alert('Error! :(')
+    //     }
+    //   });
+    // }
 }
 
