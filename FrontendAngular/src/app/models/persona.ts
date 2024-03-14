@@ -1,4 +1,5 @@
 export class Persona {
+    id!:number;
     tipoDocumento!: string;
     documento!: string;
     nombre1!: string;
