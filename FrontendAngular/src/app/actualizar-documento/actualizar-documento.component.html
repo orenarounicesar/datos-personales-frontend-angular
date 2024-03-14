@@ -16,51 +16,55 @@
 
 <div class="container1">
 
-  <div class="container_form">
-
-    <div class="contenedor_text">
-      <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Id</label>
-        <input type="text" class="form-control" id="campo_id" placeholder="0001" >
-        <button class="btn">Buscar</button>
-      </div>
-      <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Tipo de Documento</label>
-        <input type="text" class="form-control" id="campo_tipoDocumento" placeholder="C.C | T.I | Pasaporte | P.P">
-      </div>
-    </div>
-
-    <div class="contenedor_text">
-      <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Nombre1</label>
-        <input type="text" class="form-control" id="campo_Nombre1" placeholder="Pepito">
-      </div>
-      <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Nombre2</label>
-        <input type="text" class="form-control" id="campo_Nombre2" placeholder="Segundo">
-      </div>
-      <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Apellido1</label>
-        <input type="text" class="form-control" id="campo_Apellido1" placeholder="Perez">
-      </div>
-    </div>
-
-
-    <div class="contenedor_text">
-      <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Apellido2</label>
-        <input type="text" class="form-control" id="campo_Apellido2" placeholder="Alvarez">
-      </div>
-      <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
-        <input type="date" class="form-control" id="campo_Fecha" placeholder="31/12/2999">
-      </div>
-      <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Sexo</label>
-        <input type="text" class="form-control" id="campo_Sexo" placeholder="M">
-      </div>
-    </div>
-
-    <button (click)="onActualizarPersona(persona)" class="btn">Actualizar</button>
+  <div class="container_form"> 
+        <div class="contenedor_text">
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Id</label>
+            <input type="text" class="form-control" id="campo_id" [(ngModel)]="persona.id" >
+            <div class="d-inline-block">
+            <button (click)="onBuscarPersona_Id(persona)" class="btn" >Buscar</button>
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Tipo de Documento</label>
+            <input type="text" class="form-control" id="campo_tipoDocumento" [(ngModel)]="persona.tipoDocumento" >
+          </div>
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Nombre1</label>
+            <input type="text" class="form-control" id="campo_Nombre1" [(ngModel)]="persona.nombre1" >
+          </div>
+        </div>
+    
+        <div class="contenedor_text">
+          
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Nombre2</label>
+            <input type="text" class="form-control" id="campo_Nombre2" [(ngModel)]="persona.nombre2" >
+          </div>
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Apellido1</label>
+            <input type="text" class="form-control" id="campo_Apellido1" [(ngModel)]="persona.apellido1" >
+          </div>
+        </div>
+    
+    
+        <div class="contenedor_text">
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Apellido2</label>
+            <input type="text" class="form-control" id="campo_Apellido2" [(ngModel)]="persona.apellido2">
+          </div>
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="campo_Fecha" [(ngModel)]="persona.fechaNacimiento" >
+          </div>
+          <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Sexo</label>
+            <input type="text" class="form-control" id="campo_Sexo" [(ngModel)]="persona.sexo" placeholder=>
+          </div>
+        </div>
+    
+        <button (click)="onActualizarPersona(persona)" class="btn">Actualizar</button>
   </div>
 </div>
+
+

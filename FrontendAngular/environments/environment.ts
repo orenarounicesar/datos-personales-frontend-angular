@@ -1,5 +1,8 @@
 export const environment = {
-    apiUrl: '192.164.4.226:8000',
-    apipython: ''
+
+    apipython: '',
+
+    apiUrl: 'http://localhost:3000'
+
     // ...otras variables de entorno
 };

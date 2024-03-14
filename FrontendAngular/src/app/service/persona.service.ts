@@ -11,21 +11,23 @@ export class PersonaService {
 
   constructor(private http:HttpClient) { }
 
+  url = `${environment.apiUrl}/api/personalinformation`;
+  
+  //urlpython= `${environment.apipython}/datos`;
+  //cambiar luego por la de python solo estaba probando en las variables de entorno :)
+  urljsonserver="http://localhost:3000/personas"
 
-
-  url = `${environment.apiUrl}/datos`;
-  urlpython= `${environment.apipython}/datos`;
 
   getPersona_Id(id:number):Observable<Persona>{
-    return this.http.get<Persona>(this.urlpython + `/${id}`);
+    return this.http.get<Persona>(this.urljsonserver + `/${id}`);
   }
 
   public addPersona(persona:Persona):Observable<Persona>{
     return this.http.post<Persona>(this.url, persona);
   }
-
+   //cambiar por la de .net solo estabaa probando
   public updatePersona(id:number, persona:Persona):Observable<Persona>{
-    return this.http.put<Persona>(this.url + `/${id}`, persona);
+    return this.http.put<Persona>(this.urljsonserver + `/${id}`, persona);
   }
 
 
