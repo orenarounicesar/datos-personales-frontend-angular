@@ -12,8 +12,12 @@ FROM nginx:1.23.3 AS nginx
 EXPOSE 80
 # Copia el directorio de la aplicación Angular compilada a la ubicación correcta
 COPY --from=build /app/dist/FrontendAngular/browser /usr/share/nginx/html
+
 # Configuracion de la variable de entorno
-ENV API_URL http://localhost:8080/api/
+
+ENV API_URL_NET http://localhost:8080
+ENV API_URL_PYTHON htttp://localhost:8000
+
 # Inicia Nginx con la configuración por defecto
 CMD ["nginx", "-g", "daemon off;"]
 
