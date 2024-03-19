@@ -1,5 +1,7 @@
 export const environment = {
-    apiUrlpython: 'htttp://localhost:8000',
 
-    apiUrlnet: 'http://localhost:3000'
+    apiUrlpython: '192.168.4.226:8000',
+
+    apiUrlnet: '192.168.4.226:2500'
+
 };

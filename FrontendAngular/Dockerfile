@@ -1,23 +1,22 @@
-# Usa la versión de Node.js adecuada para tu proyecto
-FROM node:20.11.1 AS build
+# Usa una imagen de Node.js como base
+FROM node:latest
+
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
-# Copia todos los archivos necesarios en un solo comando
-COPY . /app/
-# Instala las dependencias sin una etapa intermedia innecesaria
+
+# Copia los archivos de tu proyecto al contenedor
+COPY . .
+
+# Instala las dependencias del proyecto
 RUN npm install
+
+# Compila la aplicación Angular
 RUN npm run build
-# Construye la aplicación Angular en una etapa separada
-FROM nginx:1.23.3 AS nginx
-# Exporta el puerto 80
+
+# Exponer el puerto 80 (opcional)
 EXPOSE 80
-# Copia el directorio de la aplicación Angular compilada a la ubicación correcta
-COPY --from=build /app/dist/FrontendAngular/browser /usr/share/nginx/html
 
-# Configuracion de la variable de entorno
+# Comando de inicio para ejecutar la aplicación Angular (opcional)
+CMD ["npm", "start"]
 
-ENV API_URL_NET http://localhost:8080
-ENV API_URL_PYTHON htttp://localhost:8000
-
-# Inicia Nginx con la configuración por defecto
-CMD ["nginx", "-g", "daemon off;"]
 

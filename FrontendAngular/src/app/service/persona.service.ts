@@ -17,7 +17,7 @@ export class PersonaService {
 
   //cambiar luego por la de python solo estaba probando en las variables de entorno :)
   //urljsonserver="http://localhost:3000/personas"
-
+  
 
   getPersona_Id(id:number):Observable<Persona>{
     return this.http.get<Persona>(this.urlpython + `/${id}`);
